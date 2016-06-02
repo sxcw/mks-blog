@@ -44,15 +44,15 @@
 <li>(Inside console) Call stack: all the functions we are currently running till this point. Each item on the stack has its own runtime scope.</li>
 <li>(Inside console) The code stack shows how the code was running before it broke</li>
 <li>(Inside console) you are trying to call <code>.classList</code> on something that is undefined –&gt; node is undefined</li>
-<li>(Inside console) Conditional: if(node===undefined) {debugger}, only stop when node is undefined</li>
-<li>A function is always truthy: if(node.hasChildNodes)… always truthy </li>
+<li>(Inside console) <code>Conditional: if(node===undefined) {debugger}</code>, only stop when node is undefined</li>
+<li>A function is always truthy: <code>if(node.hasChildNodes)</code>… always truthy </li>
 <li>Memorize: 0,false, “”, NaN, null, undefined are falsey. Negative numbers are truthy (surprise!)</li>
 </ul>
-<h2 id="Data-structures"><a href="#Data-structures" class="headerlink" title="Data structures"></a>Data structures</h2><p>Question: why do we need data structures:<br>Answer: We need to store/organize data in a way that makes sense. Different data structures have different characteristics. They also provide a known set of assumptions of how the data will act and run (consider time complexity, which way is more difficult to access data, more expensive?)  </p>
+<h2 id="Data-structures"><a href="#Data-structures" class="headerlink" title="Data structures"></a>Data structures</h2><p><strong>Question: why do we need data structures?</strong></p>
+<p>Answer: We need to store/organize data in a way that makes sense. Different data structures have different characteristics. They also provide a known set of assumptions of how the data will act and run (consider time complexity, which way is more difficult to access data, more expensive?)  </p>
 <p>An expensive operation: in order to accomplish a goal, the computer has to do tons of things (it could be easier…)</p>
-<p><strong><em>Limited Data Structure (restricted for good reasons: for example: only interact with the top item)</em></strong></p>
-<p>###Stacks (First in last out, like a stack of dinner plates)</p>
-<p>Interface(how you interact with something), also known as API (application programming interface):</p>
+<p><strong><em>Limited Data Structures, including stacks and queues are restricted for good reasons: for example: only interact with the top item. </em></strong></p>
+<h3 id="Stacks-First-in-last-out-like-a-stack-of-dinner-plates"><a href="#Stacks-First-in-last-out-like-a-stack-of-dinner-plates" class="headerlink" title="Stacks (First in last out, like a stack of dinner plates)"></a>Stacks (First in last out, like a stack of dinner plates)</h3><p>Interface(how you interact with something), also known as API (application programming interface):</p>
 <ul>
 <li>push: put an item onto the top of the stack</li>
 <li>pop: take an item off the top of the stack</li>
@@ -60,8 +60,7 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">stack.push(10);</span><br><span class="line">stack.push(20);</span><br><span class="line">stack.push(30);</span><br><span class="line">// stack is [10,20,30];</span><br><span class="line">stack.pop();</span><br><span class="line">stack.peek(stack.length-1);</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function createStackPusher()&#123;</span><br><span class="line">  var stack = [];</span><br><span class="line">  return function(x)&#123;</span><br><span class="line">    stack.push()</span><br><span class="line">    return stack.length;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var stackPusher = createStackPusher();</span><br><span class="line">stackPusher(10);  //can only do push</span><br></pre></td></tr></table></figure>
-<p>###Queues (First in first out, a line for a popular restaurant)</p>
-<p>Interface:</p>
+<h3 id="Queues-First-in-first-out-a-line-for-a-popular-restaurant"><a href="#Queues-First-in-first-out-a-line-for-a-popular-restaurant" class="headerlink" title="Queues (First in first out, a line for a popular restaurant)"></a>Queues (First in first out, a line for a popular restaurant)</h3><p>Interface:</p>
 <ul>
 <li>enqueue: put an item into the queue</li>
 <li>dequeue: take an item out of the front of the queue</li>
