@@ -8,17 +8,10 @@
 <p>Note #6: <code>Object.getPrototypeOf(child) === parent</code> ; To check prototypal relationship: <code>Object.getPrototypeOf(Array.prototype) === Object.prototype</code></p>
 <p>Note #7: <code>console.dir(Array.prototype)</code></p>
 <p>Note #8: All functions come with a <code>.prototype</code> property that points to an empty object (almost empty, because it has a <code>.constructor</code> property that points back to its own ).<br>Note #9: <code>.prototype</code> is not a keyword, it’s just a property name( good thing is we get it for free, every function has it!)</p>
-<h2 id="Complexity-Analysis-in-the-Real-World"><a href="#Complexity-Analysis-in-the-Real-World" class="headerlink" title="Complexity Analysis in the Real World"></a>Complexity Analysis in the Real World</h2><h3 id="Quick-Notes-1"><a href="#Quick-Notes-1" class="headerlink" title="Quick Notes"></a>Quick Notes</h3><ul>
-<li>Two types: time and space, but we mostly worry about time. </li>
-<li>n : input size</li>
-<li>Example: find out the greatest difference in <code>[10,5,15,50]</code>;<br>How many operations we need to do ? </li>
-</ul>
+<h2 id="Complexity-Analysis-in-the-Real-World"><a href="#Complexity-Analysis-in-the-Real-World" class="headerlink" title="Complexity Analysis in the Real World"></a>Complexity Analysis in the Real World</h2><h3> Quick Notes </h3><br><em> Two types: time and space, but we mostly worry about time. 
+</em> n : input size<br><em> Example: find out the greatest difference in <code>[10,5,15,50]</code>;<br>How many operations we need to do ?<br>- n </em> n (n square), if we take 10 and do 10-5, 10-5, 10-15, 10-50… and take the next number 5, 5-15,5-50…, the number of steps is close to n square. ==&gt; O(n2)<br>- 2n, find the smallest number and biggest number, and result = biggest - smallest ==&gt; O(n)<br>- constant (awesome!), if the list is sorted, then result = last item -first item ==&gt; O(1)<br><br><h3> Types </h3>
+
 <ul>
-<li>n * n (n square), if we take 10 and do 10-5, 10-5, 10-15, 10-50… and take the next number 5, 5-15,5-50…, the number of steps is close to n square. ==&gt; O(n2) </li>
-<li>2n, find the smallest number and biggest number, and result = biggest - smallest ==&gt; O(n)</li>
-<li>constant (awesome!), if the list is sorted, then result = last item -first item ==&gt; O(1)</li>
-</ul>
-<h3 id="Types"><a href="#Types" class="headerlink" title="Types"></a>Types</h3><ul>
 <li>logarithmic algorithm, faster than linear, because each step we eliminate half of the input.</li>
 <li>constant: O(1)</li>
 <li>linear: O(n)</li>
