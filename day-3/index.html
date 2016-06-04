@@ -4,14 +4,14 @@
 <p>Note #2: <code>bind</code> : create a copy of function, bind something to be perimeter <code>this</code>, the original function is unchanged.</p>
 <p>Note #3: The only difference between an object decorator and a class is that a class builds the object it’s augmenting, whereas decorators accept their target object as an input.</p>
 <p>Note #4: Prototypal : instead of assigning methods directly to child object, child object inherits from them. </p>
-<p>Note #5: Inherit method: Object.create(parent) // create an empty object and inherit from it. Child doesn’t have all properties from parents, there is just a link. Create a link to the parental object, continuous relationship </p>
-<p>Note #6: <code>Object.getPrototypeOf(child) === parent</code>; To check prototypal relationship: <code>Object.getPrototypeOf(Array.prototype) === Object.prototype</code></p>
+<p>Note #5: <code>Inherit method: Object.create(parent)</code> – create an empty object and inherit from it. Child doesn’t have all properties from parents, there is just a link. Create a link to the parental object, continuous relationship </p>
+<p>Note #6: <code>Object.getPrototypeOf(child) === parent</code> ; To check prototypal relationship: <code>Object.getPrototypeOf(Array.prototype) === Object.prototype</code></p>
 <p>Note #7: <code>console.dir(Array.prototype)</code></p>
 <p>Note #8: All functions come with a <code>.prototype</code> property that points to an empty object (almost empty, because it has a <code>.constructor</code> property that points back to its own ).<br>Note #9: <code>.prototype</code> is not a keyword, it’s just a property name( good thing is we get it for free, every function has it!)</p>
 <h2 id="Complexity-Analysis-in-the-Real-World"><a href="#Complexity-Analysis-in-the-Real-World" class="headerlink" title="Complexity Analysis in the Real World"></a>Complexity Analysis in the Real World</h2><h3 id="Quick-Notes-1"><a href="#Quick-Notes-1" class="headerlink" title="Quick Notes"></a>Quick Notes</h3><ul>
 <li>Two types: time and space, but we mostly worry about time. </li>
 <li>n : input size</li>
-<li>Example: find out the greatest difference in [10,5,15,50];<br>How many operations we need to do ? </li>
+<li>Example: find out the greatest difference in <code>[10,5,15,50]</code>;<br>How many operations we need to do ? </li>
 </ul>
 <ul>
 <li>n * n (n square), if we take 10 and do 10-5, 10-5, 10-15, 10-50… and take the next number 5, 5-15,5-50…, the number of steps is close to n square. ==&gt; O(n2) </li>
