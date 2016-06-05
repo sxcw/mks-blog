@@ -8,12 +8,37 @@
 <li>Allocating too much – need to reallocate often; allocating too big – waste of memory</li>
 <li>Amortized constant: mostly constant, but sometimes more than that(slower)</li>
 </ul>
-<p></p><h3> Linked Lists like scanvager hunt:</h3><p></p>
+<p></p><h3> Linked List is like a scanvager hunt:</h3><p></p>
 <ul>
 <li>Upside: rooms can be anywhere</li>
 <li>Downside: need to access the first room to get to any room</li>
 <li>Adding/removing items are always constant</li>
 <li>Searching for an item is linear</li>
+</ul>
+<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><ul>
+<li>Step by step instruction to solve problems, like a recipe</li>
+<li>We should have an expected result in the end </li>
+<li>Steps:</li>
+</ul>
+<ul>
+<li>Establish rules of problems, contraints, what are inputs/ outputs</li>
+<li>(if using TDD) Write a test that would verify a solution</li>
+<li>Explore the problem space and discover techniques (what are some edge cases– empty list, nested list?) </li>
+<li>Generate a simple plan in plain langauge that solve the problem (You must be able to articulate the solution first)</li>
+<li>Elaborate the plan into steps (pseudocode) : using indentation to show hierarchy.  More explicitly define things, and more technical. </li>
+<li>(Walk through the code as the interpreter)Optionally, verify each step using simple inputs. </li>
+<li>Translate each step into code</li>
+</ul>
+<h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><ul>
+<li>Get something, do something</li>
+<li><code>$</code> jQuery’s convenience variable so that we don’t need to spell out <code>jQuery</code></li>
+<li><code>$(&#39;.person&#39;).css({&#39;font-size&#39; :&#39;1em&#39;})</code> === <code>$(&#39;.person).css({&#39;font-size&#39;, &#39;1em&#39;})</code></li>
+<li>Can have multiple pairs: <code>$(&#39;.person&#39;).css({&#39;font-size&#39; :&#39;1em&#39;, &#39;background&#39;:&#39;#ccc&#39;})</code></li>
+<li>jQuery’s <code>on</code> method helps us respond to user’s action like clicking </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;p&apos;).on(&apos;click&apos;,function(e)&#123;</span><br><span class="line">	var text = $(this).text();</span><br><span class="line">	alert();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Merge"><a href="#Merge" class="headerlink" title="Merge"></a>Merge</h2><ul>
+<li><code>git mergetool</code> –&gt; <code>git add</code> –&gt; <code>git commit</code></li>
 </ul>
 </div><!-- comment system--><div class="container"></div></article><footer id="footer"><div class="container"><div class="bar"><div class="social"><a href="https://github.com/sxcw" target="_blank"><i class="fa fa-github"></i></a></div><div class="footer">© 2016 <a href="/mks-blog/." rel="nofollow">MKS Daily</a>. Powered by <a rel="nofollow" target="_blank" href="https://hexo.io">Hexo</a>. Theme <a target="_blank" href="https://github.com/lotabout/very-simple">very-simple</a>.</div></div></div></footer><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
     $(".fancybox").fancybox();
