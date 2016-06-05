@@ -2,36 +2,29 @@
 <h2 id="Arrays-and-Linked-Lists"><a href="#Arrays-and-Linked-Lists" class="headerlink" title="Arrays and Linked Lists"></a>Arrays and Linked Lists</h2><ul>
 <li>JS’s arrays are closer to hash tables</li>
 <li>Array as spots </li>
-<li>Accessing an array is constant(random access–give me array[3]),but that is rarely the case, we usually search an array(linear: give me an item that is greater than 100) </li>
-<li>Deleting an item from array is linear, because getting rid a spot will cause other items to shift over, number of operation depends on how many items we have. Adding an item to the start of an array is linear too. (consider shift())</li>
-<li>myArray.push(20)– this operation is constant</li>
+<li>Accessing an array is constant(random access–give me <code>array[3]</code> ),but that is rarely the case, we usually search an array(linear: give me an item that is greater than 100) </li>
+<li>Deleting an item from array is linear, because getting rid a spot will cause other items to shift over, number of operation depends on how many items we have. Adding an item to the start of an array is linear too. (consider <code>shift()</code>)</li>
+<li><code>myArray.push(20)</code>– this operation is constant</li>
 <li>Allocating too much – need to reallocate often; allocating too big – waste of memory</li>
 <li>Amortized constant: mostly constant, but sometimes more than that(slower)</li>
 </ul>
-<p></p><h3> Linked List is like a scanvager hunt:</h3><p></p>
+<h3> Linked List is like a scavenger hunt:</h3><br><em> Upside: rooms can be anywhere
+</em> Downside: need to access the first room to get to any room<br><em> Adding/removing items are always constant
+</em> Searching for an item is linear<br><br><br>Algorithm<br>———————–<br><em> Step by step instruction to solve problems, like a recipe
+</em> We should have an expected result in the end<br><br><h3> Steps: </h3> 
+
 <ul>
-<li>Upside: rooms can be anywhere</li>
-<li>Downside: need to access the first room to get to any room</li>
-<li>Adding/removing items are always constant</li>
-<li>Searching for an item is linear</li>
-</ul>
-<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><ul>
-<li>Step by step instruction to solve problems, like a recipe</li>
-<li>We should have an expected result in the end </li>
-<li>Steps:</li>
-</ul>
-<ul>
-<li>Establish rules of problems, contraints, what are inputs/ outputs</li>
+<li>Establish rules of problems, constraints, what are inputs/ outputs</li>
 <li>(if using TDD) Write a test that would verify a solution</li>
 <li>Explore the problem space and discover techniques (what are some edge cases– empty list, nested list?) </li>
-<li>Generate a simple plan in plain langauge that solve the problem (You must be able to articulate the solution first)</li>
-<li>Elaborate the plan into steps (pseudocode) : using indentation to show hierarchy.  More explicitly define things, and more technical. </li>
+<li>Generate a simple plan in plain language that solve the problem (You must be able to articulate the solution first)</li>
+<li>Elaborate the plan into steps (pseudo code) : using indentation to show hierarchy.  More explicitly define things, and more technical. </li>
 <li>(Walk through the code as the interpreter)Optionally, verify each step using simple inputs. </li>
 <li>Translate each step into code</li>
 </ul>
 <h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><ul>
 <li>Get something, do something</li>
-<li><code>$</code> jQuery’s convenience variable so that we don’t need to spell out <code>jQuery</code></li>
+<li><code>$</code> is jQuery’s convenience variable so that we don’t need to spell out <code>jQuery</code></li>
 <li><code>$(&#39;.person&#39;).css({&#39;font-size&#39; :&#39;1em&#39;})</code> === <code>$(&#39;.person).css({&#39;font-size&#39;, &#39;1em&#39;})</code></li>
 <li>Can have multiple pairs: <code>$(&#39;.person&#39;).css({&#39;font-size&#39; :&#39;1em&#39;, &#39;background&#39;:&#39;#ccc&#39;})</code></li>
 <li>jQuery’s <code>on</code> method helps us respond to user’s action like clicking </li>
