@@ -1,6 +1,5 @@
 <!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="MakerSqaure experience"><title>Day 12 | MKS Daily</title><link rel="stylesheet" type="text/css" href="/mks-blog//css/normalize.css"><link rel="stylesheet" type="text/css" href="/mks-blog//css/highlight.css"><link rel="stylesheet" type="text/css" href="/mks-blog//css/very-simple.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Droid+Serif|Lobster+Two:700"><link rel="Shortcut Icon" type="image/x-icon" href="/mks-blog/favicon.ico"></head><body><!-- include the sidebar--><!-- include ./includes/sidebar.jade--><!-- Blog title and subtitle--><header><div class="container header"><a id="logo" href="/mks-blog/." class="title">MKS Daily</a><span class="subtitle">... <span class="special">once in a lifetime </span> bootcamp experience at MakerSquare</span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div></header><!-- use checkbox hack for toggle nav-bar on small screens--><input id="menu" type="checkbox"><!-- Navigation Links--><nav id="nav"><div class="container"><a href="/mks-blog/." class="sidebar-nav-item">Home</a><a href="/mks-blog/archives" class="sidebar-nav-item">Archives</a></div></nav><div id="header-margin-bar"></div><!-- gallery that comes before the header--><div class="wrapper"><div class="container post-header"><h1>Day 12</h1></div></div><div class="wrapper"><div class="container meta"><div class="post-time">2016-06-13</div><div class="post-tags"><a class="post-tag-link" href="/mks-blog/tags/API/">API</a>/<a class="post-tag-link" href="/mks-blog/tags/HTTP/">HTTP</a>/<a class="post-tag-link" href="/mks-blog/tags/REST/">REST</a>/<a class="post-tag-link" href="/mks-blog/tags/during-bootcamp/">during-bootcamp</a></div></div></div><article><div class="container post"><p>This week I will delve deeper into MVC by making 3 web apps, using Backbone or Mithril libraries.    </p>
-<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>Client: sends a request to server </p>
-<h3> Request </h3>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><h3> Request – Client: sends a request to server </h3>
 
 <ul>
 <li>Endpoint: overall address that we request, method + url (Method includes <code>get</code> , <code>post</code> , <code>put/patch</code>(update data) ,<code>delete</code> ; url can be <code>/comments</code> , <code>users/5</code> , <code>/</code> –&gt; root)</li>
@@ -8,15 +7,14 @@
 <li>Body: any request sent to server goes to request body</li>
 </ul>
 <p>Note #1: Get requests don’t change data, only ask for data, so no request body<br>(endpoint: get/)<br>Note #2: status code 404 means endpoint doesn’t exist<br>Note #3: post/put request almost always has a body(like a string of JSON). Must be specific in the header (<code>content-type</code>)<br>Note #4: only send in content-type if we have request body.<br>Note #5: every time we hava a style tag or script tag means a new HTTP <code>get</code> request<br>Note #6: Q: When a server receives an HTTP request, how does the server know when the request headers stop, and when the request body (if any) starts? A: empty line seperating header and body<br>Again, need a request body if it’s a get/put request<br>Note #7: url can have Query parameters  –&gt; <code>/users/5?order=ASC&amp;name=Alice</code><br>Note #8: <code>curl</code>: make an http request from the terminal</p>
-<p>Server: sends back a response</p>
-<h3> Response </h3>
+<h3> Response – Server: sends back a response </h3>
 
 <ul>
 <li>Status code: 200 great, 500 something broke on the server side, 400 client side broken</li>
 <li>Headers: key-value pairs, most important –&gt; <code>content-type</code> : <code>text/html</code> ( server knows how to interpret the data)</li>
 <li>Body: the html text (the meat the server gives back)</li>
 </ul>
-<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><p>API: interface is a description of how you can interact with something </p>
+<h2 id="Other-Study-Notes"><a href="#Other-Study-Notes" class="headerlink" title="Other Study Notes"></a>Other Study Notes</h2><p>API: interface is a description of how you can interact with something </p>
 <ul>
 <li>Code API: how we interact with code (array API: .push,.pop, .slice)</li>
 <li>REST API: how to interact with a web app, via HTTP</li>
