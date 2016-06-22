@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="MakerSqaure experience"><title>Day 18 Is the Beginning of Server | MKS Daily</title><link rel="stylesheet" type="text/css" href="/mks-blog//css/normalize.css"><link rel="stylesheet" type="text/css" href="/mks-blog//css/highlight.css"><link rel="stylesheet" type="text/css" href="/mks-blog//css/very-simple.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Droid+Serif|Lobster+Two:700"><link rel="Shortcut Icon" type="image/x-icon" href="/mks-blog/favicon.ico"></head><body><!-- include the sidebar--><!-- include ./includes/sidebar.jade--><!-- Blog title and subtitle--><header><div class="container header"><a id="logo" href="/mks-blog/." class="title">MKS Daily</a><span class="subtitle">... <span class="special">once in a lifetime </span> bootcamp experience at MakerSquare</span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div></header><!-- use checkbox hack for toggle nav-bar on small screens--><input id="menu" type="checkbox"><!-- Navigation Links--><nav id="nav"><div class="container"><a href="/mks-blog/." class="sidebar-nav-item">Home</a><a href="/mks-blog/archives" class="sidebar-nav-item">Archives</a></div></nav><div id="header-margin-bar"></div><!-- gallery that comes before the header--><div class="wrapper"><div class="container post-header"><h1>Day 18 Is the Beginning of Server</h1></div></div><div class="wrapper"><div class="container meta"><div class="post-time">2016-06-20</div><div class="post-tags"><a class="post-tag-link" href="/mks-blog/tags/Node-js/">Node.js</a>/<a class="post-tag-link" href="/mks-blog/tags/during-bootcamp/">during-bootcamp</a>/<a class="post-tag-link" href="/mks-blog/tags/react/">react</a></div></div></div><article><div class="container post"><p>Started server side from today!</p>
+<h2 id="React-js-Program-Notes"><a href="#React-js-Program-Notes" class="headerlink" title="React.js Program Notes"></a>React.js Program Notes</h2><ul>
+<li>The reason for the consistency and predictability is because pure functions have the following characteristics.</li>
+</ul>
+<ul>
+<li>Pure functions always return the same result given the same arguments. </li>
+<li>Pure function’s execution doesn’t depend on the state of the application.</li>
+<li>Pure functions don’t modify the variables outside of their scope.</li>
+</ul>
+<h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><ul>
+<li><code>Node.js</code> is Javascript runtime, allowing us to run Javascript on the server side</li>
+<li>CommonJS (the ‘require’ stuff): also available via browserify, commonJS takes each file and make each of them an individual scope. </li>
+<li>require is a function call, it returns an object (every single file return implicitly return <code>module.exports</code>) Implicitly put everything of a file to <code>module.exports={}</code></li>
+<li><code>require</code> points to what <code>exports</code> assigns to<br><code>var mod= require(./lib/my-module)</code> <code>module.exports={}</code></li>
+<li>Multiple files may require the same file</li>
+<li>File runs once and it will be remembered next time we request</li>
+<li><code>./</code> ==&gt; same folder. Anytime we require a folder, need to start with a <code>.</code></li>
+<li><code>../</code> ==&gt; go up a directory</li>
+<li>no dot ==&gt; check for npm installed module, or a built in module for node like <code>http</code></li>
+<li>3000-10000 (3000,4000,5000,6000)</li>
+<li>Non-blocking nature: request.on(‘data’)– &gt; look this up</li>
+<li>write response status code and headers <code>response.writeHead</code></li>
+<li>wrtie response body <code>response.end()</code>    </li>
+<li>npm install nodemon <code>nodemon demo.js</code></li>
+<li>server: receive a request, look at endpoint(request.url), send something back</li>
+</ul>
+</div><!-- comment system--><div class="container"></div></article><footer id="footer"><div class="container"><div class="bar"><div class="social"><a href="https://github.com/sxcw" target="_blank"><i class="fa fa-github"></i></a></div><div class="footer">© 2016 <a href="/mks-blog/." rel="nofollow">MKS Daily</a>. Powered by <a rel="nofollow" target="_blank" href="https://hexo.io">Hexo</a>. Theme <a target="_blank" href="https://github.com/lotabout/very-simple">very-simple</a>.</div></div></div></footer><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+    $(".fancybox").fancybox();
+});</script></body></html>
