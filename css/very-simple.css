@@ -310,10 +310,8 @@ nav {
   overflow: hidden;
   text-align: center;
   border-bottom: 2px solid #CCC;
-  color: #777; }
-  @media only screen and (max-width: 768px) {
-    .page-navigator {
-      border-top: 2px solid #CCC; } }
+  color: #777;
+  border-top: 2px solid #CCC; }
   .page-navigator * {
     padding: 1px 20px; }
   .page-navigator .page-number {
